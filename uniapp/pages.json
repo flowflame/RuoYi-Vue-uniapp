@@ -1,0 +1,58 @@
+{
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+      }
+    },
+    {
+      "path": "pages/hot/index",
+      "style": {
+      }
+    },
+    {
+      "path": "pages/center/index",
+      "style": {
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom"
+    //自定义
+    // "navigationBarTextStyle": "black",
+    // "navigationBarTitleText": "uni-app",
+    // "navigationBarBackgroundColor": "#F8F8F8",
+    // "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {},
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "white",
+    "color": "#8a8a8a",
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar/index.png",
+        "selectedIconPath": "static/tabBar/index_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/hot/index",
+        "iconPath": "static/tabBar/style.png",
+        "selectedIconPath": "static/tabBar/style_active.png",
+        "text": "热门"
+      },
+      {
+        "pagePath": "pages/center/index",
+        "iconPath": "static/tabBar/center.png",
+        "selectedIconPath": "static/tabBar/center_active.png",
+        "text": "个人"
+      }
+    ]
+  }
+}

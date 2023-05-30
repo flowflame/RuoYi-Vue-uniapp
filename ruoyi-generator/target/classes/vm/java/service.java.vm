@@ -1,0 +1,30 @@
+package ${packageName}.service;
+
+import java.util.List;
+import ${packageName}.domain.${ClassName};
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * ${functionName}Service接口
+ * 
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface I${ClassName}Service  extends IService<${ClassName}> {
+
+#if($table.sub)
+    /**
+     * 查询${functionName}
+     * 
+     * @param ${pkColumn.javaField} ${functionName}主键
+     * @return ${functionName}
+     */
+    public ${ClassName} select${ClassName}By${pkColumn.capJavaField}(${pkColumn.javaType} ${pkColumn.javaField});
+#end
+#if(!$table.crud)
+    /**
+     * 查询${functionName}列表
+     */
+    public List<${ClassName}> select${ClassName}List(${ClassName} ${className});
+#end
+}
